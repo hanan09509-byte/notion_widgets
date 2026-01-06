@@ -16,8 +16,9 @@
 
     body {
       font-family: "Lexend", sans-serif;
-      background-color: #000; /* Changed to black for better contrast with "fit" images */
-      color: #e5ebf3;
+      /* CHANGED: Background white, Text dark */
+      background-color: #ffffff; 
+      color: #362a2b;
     }
 
     .slider {
@@ -25,7 +26,8 @@
       width: 100vw;
       height: 100vh;
       overflow: hidden;
-      background-color: #000; /* Ensures black bars around images */
+      /* CHANGED: Background white */
+      background-color: #ffffff; 
     }
 
     .slide {
@@ -42,102 +44,30 @@
       opacity: 1;
     }
 
-    /* UPDATED SECTION: 
-       Changed 'center top/cover' to 'center center/contain' 
-       to make images fit within the screen.
-    */
-
-    .slide:first-child {
-      background: url("1.jpg") no-repeat center center/contain;
-    }
-
-    .slide:nth-child(2) {
-      background: url("2.jpg") no-repeat center center/contain;
-    }
-
-    .slide:nth-child(3) {
-      background: url("3.jpg") no-repeat center center/contain;
-    }
-
-    .slide:nth-child(4) {
-      background: url("4.jpg") no-repeat center center/contain;
-    }
-
-    .slide:nth-child(5) {
-      background: url("5.jpg") no-repeat center center/contain;
-    }
-
-    .slide:nth-child(6) {
-      background: url("6.jpg") no-repeat center center/contain;
-    }
-
-    .slide:nth-child(7) {
-      background: url("7.jpg") no-repeat center center/contain;
-    }
-
-    .slide:nth-child(8) {
-      background: url("8.jpg") no-repeat center center/contain;
-    }
-
-    .slide:nth-child(9) {
-      background: url("9.jpg") no-repeat center center/contain;
-    }
-
-    .slide:nth-child(10) {
-      background: url("10.jpg") no-repeat center center/contain;
-    }
-
-    .slide:nth-child(11) {
-      background: url("11.jpg") no-repeat center center/contain;
-    }
-
-    .slide:nth-child(12) {
-      background: url("12.jpg") no-repeat center center/contain;
-    }
-
-    .slide:nth-child(13) {
-      background: url("13.jpg") no-repeat center center/contain;
-    }
-
-    .slide:nth-child(14) {
-      background: url("14.jpg") no-repeat center center/contain;
-    }
-
-    .slide:nth-child(15) {
-      background: url("15.jpg") no-repeat center center/contain;
-    }
-
-    .slide:nth-child(16) {
-      background: url("16.jpg") no-repeat center center/contain;
-    }
-
-    .slide:nth-child(17) {
-      background: url("17.jpg") no-repeat center center/contain;
-    }
-
-    /* Note: You had nth-child(17) twice in your original code. 
-       I left it as is to avoid breaking your file order, 
-       but you might want to check your file names. */
-    .slide:nth-child(17) {
-      background: url("17.jpg") no-repeat center center/contain;
-    }
-
-    .slide:nth-child(18) {
-      background: url("18.jpg") no-repeat center center/contain;
-    }
-
-    .slide:nth-child(19) {
-      background: url("19.jpg") no-repeat center center/contain;
-    }
-
-    .slide:nth-child(20) {
-      background: url("20.jpg") no-repeat center center/contain;
-    }
-
-    .slide:nth-child(21) {
-      background: url("21.jpg") no-repeat center center/contain;
-    }
-
+    /* Images set to 'contain' to fit the screen */
+    .slide:first-child { background: url("1.jpg") no-repeat center center/contain; }
+    .slide:nth-child(2) { background: url("2.jpg") no-repeat center center/contain; }
+    .slide:nth-child(3) { background: url("3.jpg") no-repeat center center/contain; }
+    .slide:nth-child(4) { background: url("4.jpg") no-repeat center center/contain; }
+    .slide:nth-child(5) { background: url("5.jpg") no-repeat center center/contain; }
+    .slide:nth-child(6) { background: url("6.jpg") no-repeat center center/contain; }
+    .slide:nth-child(7) { background: url("7.jpg") no-repeat center center/contain; }
+    .slide:nth-child(8) { background: url("8.jpg") no-repeat center center/contain; }
+    .slide:nth-child(9) { background: url("9.jpg") no-repeat center center/contain; }
+    .slide:nth-child(10) { background: url("10.jpg") no-repeat center center/contain; }
+    .slide:nth-child(11) { background: url("11.jpg") no-repeat center center/contain; }
+    .slide:nth-child(12) { background: url("12.jpg") no-repeat center center/contain; }
+    .slide:nth-child(13) { background: url("13.jpg") no-repeat center center/contain; }
+    .slide:nth-child(14) { background: url("14.jpg") no-repeat center center/contain; }
+    .slide:nth-child(15) { background: url("15.jpg") no-repeat center center/contain; }
+    .slide:nth-child(16) { background: url("16.jpg") no-repeat center center/contain; }
+    .slide:nth-child(17) { background: url("17.jpg") no-repeat center center/contain; }
+    /* Duplicate 17 kept from original code structure */
+    .slide:nth-child(17) { background: url("17.jpg") no-repeat center center/contain; }
+    .slide:nth-child(18) { background: url("18.jpg") no-repeat center center/contain; }
+    .slide:nth-child(19) { background: url("19.jpg") no-repeat center center/contain; }
+    .slide:nth-child(20) { background: url("20.jpg") no-repeat center center/contain; }
+    .slide:nth-child(21) { background: url("21.jpg") no-repeat center center/contain; }
 
     .buttons button#prev {
       position: absolute;
@@ -151,19 +81,21 @@
       right: 1rem;
     }
 
+    /* CHANGED: Button colors adapted for White Background */
     .buttons button {
-      border: 2px solid #e5ebf3;
-      background-color: rgba(0,0,0,0.5); /* Added slight background for visibility */
-      color: #e5ebf3;
+      border: 2px solid #362a2b; /* Dark border */
+      background-color: rgba(255, 255, 255, 0.7); /* Light semi-transparent bg */
+      color: #362a2b; /* Dark arrow color */
       cursor: pointer;
       padding: 13px 15px;
       border-radius: 50%;
       outline: none;
+      transition: all 0.3s ease;
     }
 
     .buttons button:hover {
-      background-color: #e5ebf3;
-      color: #362a2b;
+      background-color: #362a2b; /* Dark bg on hover */
+      color: #ffffff; /* White arrow on hover */
     }
 
     @media (min-width: 640px) and (min-height: 640px) {
@@ -221,7 +153,7 @@
     const prevButton = document.getElementById("prev");
     const auto = true;
     
-    // UPDATED: Changed from 5000 to 10000 (10 seconds)
+    // Interval time set to 10 seconds
     const intervalTime = 10000; 
     
     let slideInterval;
